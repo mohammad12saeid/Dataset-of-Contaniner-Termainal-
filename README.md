@@ -11,6 +11,12 @@ The deep learning is a key technology in future, because it helps us in our life
 overview:
  the application read container number then take image in 4 cameras for save container status, then it will save container number in database TOS without enter data from clerk. 
 we can use this application for entry gate, exit gate, and discharge from vessel that is easy, because we only need insert records for container number and plate license of truck, and the rest of the information from TOS system.
+for running:
+python detect.py --weights last.pt  --source rtsp://username:password@ip # for IP camera
+python detect.py --weights last.pt  --source 0 # for laptop camera
+python detect.py --weights last.pt  --source test.jpg # for image
+python detect.py --weights last.pt  --source test.mp4 # for video
+
 ------------------------------------------------------------------------------------------------------------------
 requirements:
 1. this application needs four cameras install in truck path for detect container and container number.
@@ -18,6 +24,7 @@ requirements:
 ---------------------------------------------------------------------------------------------------------------------
 Issues:
 I can’t run one application for all cameras , I only can run one application for one camera , that mean I need one server with GPU for every cameras , that is high cost.
+
 -----------------------------------------------------------------------------------------------------------------------
 future:
 1. I will improve the application for loading to vessel there is more working for detect bay, row, and tier.
